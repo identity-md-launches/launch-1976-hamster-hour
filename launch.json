@@ -1,0 +1,24 @@
+{
+  "kind": "custom_token",
+  "token": {
+    "contract": "HamsterHour",
+    "name": "Hamster Hour",
+    "symbol": "HAMSTER",
+    "decimals": 18,
+    "constructorArgs": [],
+    "totalSupply": "1000000000000000000000000000"
+  },
+  "contracts": [],
+  "pool": {
+    "pairedCurrency": "0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7",
+    "fee": 12500,
+    "tickSpacing": 60,
+    "initialPrice": "79228162514264337593543950336"
+  },
+  "economics": {
+    "poolBps": 8000,
+    "initialMarketCapWei": "3500000000000000000000",
+    "remainderTo": "0xce34a5ae98f51b499b92063a7a83d49b26ee5b14"
+  },
+  "notes": "HamsterHour (src/HamsterHour.sol) is a fixed-supply ERC-20 built on the unmodified OpenZeppelin Contracts v5.0.2 ERC20. Its constructor takes no arguments and mints INITIAL_SUPPLY, 1,000,000,000 HAMSTER with 18 decimals (1000000000000000000000000000 minor units), once to msg.sender, which at launch is the factory. There is no owner, no privileged role, no mint or burn function, no pause, blacklist or freeze, no fee or tax on transfer, no external call and no upgrade path: every transfer delivers exactly the amount specified, so the factory's transfer to the distributor, the pool seed and trades through the PoolManager move exactly what they say. The supply cannot change after deployment. There are no application contracts and no initialization calls. The pool pairs with IMD at 0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7; pool.initialPrice is provenance only and the deployer derives the opening price from economics.initialMarketCapWei and the total supply."
+}
